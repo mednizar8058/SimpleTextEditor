@@ -32,7 +32,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func colorSeg(_ sender: UISegmentedControl) {
-        if(sender.selectedSegmentIndex == 0){
+        if(sender.selectedSegmentIndex == 1){
             input.textColor = UIColor.black
 
         }
