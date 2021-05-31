@@ -18,8 +18,19 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func emojiAction(_ sender: Any) {
+    @IBAction func emojiAction(_ sender: UISegmentedControl) {
+        if(sender.selectedSegmentIndex == 0){
+            input.insertText("😂")
+        }
+        else if(sender.selectedSegmentIndex == 1){
+            input.insertText("😰")
+        }
+        else{
+            input.insertText("😎")
+
+        }
     }
+    
     @IBAction func colorSeg(_ sender: UISegmentedControl) {
         if(sender.selectedSegmentIndex == 0){
             input.textColor = UIColor.black
@@ -37,10 +48,11 @@ class ViewController: UIViewController{
     }
     
     @IBAction func italicAction(_ sender: Any) {
-        input.font = UIFont.boldSystemFont(ofSize: 16)
+        input.font = UIFont.italicSystemFont(ofSize: 16)
     }
     
     @IBAction func underlineAction(_ sender: Any) {
+        
         
     }
 }
