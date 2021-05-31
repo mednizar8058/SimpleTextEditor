@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Le9-ag-yeV">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896.00000000000045"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaP-B0-nlE">
                                 <rect key="frame" x="64" y="97" width="55" height="46"/>
@@ -59,8 +59,9 @@
                                     <action selector="colorSeg:" destination="BYZ-38-t0r" eventType="valueChanged" id="xUG-cR-Ir3"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edition : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-hD-Iv7">
-                                <rect key="frame" x="36" y="359.5" width="66" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edition : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-hD-Iv7">
+                                <rect key="frame" x="14" y="353" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,36 +80,41 @@
                                     <action selector="emojiAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rvb-XG-bPi"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="testing" placeholder="text" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zby-AD-kbn">
-                                <rect key="frame" x="129" y="330" width="254" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Mnn-0D-OSx"/>
-                                    <constraint firstAttribute="width" constant="254" id="Tru-yV-ZmR"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="text" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zby-AD-kbn">
+                                <rect key="frame" x="88" y="347" width="254" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kul-kw-4lS">
+                                <rect key="frame" x="345" y="59" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="UwY-PC-7LE"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Le9-ag-yeV" secondAttribute="bottom" constant="-33.999999999999545" id="7Z3-Op-TiB"/>
                             <constraint firstItem="jY7-aY-Yny" firstAttribute="top" secondItem="lSC-jf-zDY" secondAttribute="bottom" constant="18" id="7sw-gx-KAE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zby-AD-kbn" secondAttribute="trailing" constant="43" id="CqO-RG-Ph6"/>
                             <constraint firstItem="lSC-jf-zDY" firstAttribute="centerX" secondItem="Le9-ag-yeV" secondAttribute="centerX" id="NkI-ox-2El"/>
                             <constraint firstItem="lSC-jf-zDY" firstAttribute="centerX" secondItem="jY7-aY-Yny" secondAttribute="centerX" id="aJE-tm-pwt"/>
                             <constraint firstItem="Le9-ag-yeV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="aNF-kO-Spa"/>
                             <constraint firstItem="Le9-ag-yeV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aYN-ud-cXX"/>
-                            <constraint firstItem="zby-AD-kbn" firstAttribute="leading" secondItem="NGB-hD-Iv7" secondAttribute="trailing" constant="15" id="fKa-Gi-qUr"/>
                             <constraint firstItem="lSC-jf-zDY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="180" id="gSX-Gf-3GD"/>
-                            <constraint firstItem="zby-AD-kbn" firstAttribute="top" secondItem="jY7-aY-Yny" secondAttribute="bottom" constant="32" id="rH8-Ng-oWe"/>
-                            <constraint firstItem="zby-AD-kbn" firstAttribute="centerY" secondItem="NGB-hD-Iv7" secondAttribute="centerY" id="uhN-dv-VWf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Le9-ag-yeV" secondAttribute="trailing" id="wTt-mD-T4D"/>
                             <constraint firstItem="lSC-jf-zDY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="xss-uH-5Mv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="boldBtn" destination="zaP-B0-nlE" id="QxZ-94-RUV"/>
+                        <outlet property="coloSegBtn" destination="lSC-jf-zDY" id="6nJ-gH-G6j"/>
+                        <outlet property="emojiSegBtn" destination="jY7-aY-Yny" id="OHu-po-rB8"/>
                         <outlet property="input" destination="zby-AD-kbn" id="0A5-iB-KcK"/>
+                        <outlet property="italicBtn" destination="hQs-xm-Ig9" id="aRp-6y-Yq2"/>
+                        <outlet property="underlineBtn" destination="VsB-TR-as4" id="dGb-k7-8lP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

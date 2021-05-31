@@ -11,11 +11,41 @@ import UIKit
 class ViewController: UIViewController{
     
     
-    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var emojiSegBtn: UISegmentedControl!
+    @IBOutlet weak var coloSegBtn: UISegmentedControl!
+    @IBOutlet weak var underlineBtn: UIButton!
+    @IBOutlet weak var italicBtn: UIButton!
+    
+    @IBOutlet weak var boldBtn: UIButton!
+    
     @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var result: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func `switch`(_ sender: UISwitch) {
+        if (sender.isOn){
+            boldBtn.isHidden = true
+            italicBtn.isHidden = true
+            underlineBtn.isHidden = true
+            
+            coloSegBtn.isHidden = true
+            
+            emojiSegBtn.isHidden = true
+        }
+        else{
+            boldBtn.isHidden = false
+            italicBtn.isHidden = false
+            underlineBtn.isHidden = false
+            
+            coloSegBtn.isHidden = false
+            
+            emojiSegBtn.isHidden = false
+            
+        }
     }
     
     @IBAction func emojiAction(_ sender: UISegmentedControl) {
@@ -32,7 +62,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func colorSeg(_ sender: UISegmentedControl) {
-        if(sender.selectedSegmentIndex == 1){
+        if(sender.selectedSegmentIndex == 0){
             input.textColor = UIColor.black
 
         }
